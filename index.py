@@ -71,3 +71,58 @@ def tambah_buku(buku):
             }
         )
         simpan(file_buku, buku)
+        
+def hapus_buku(buku):
+    while True:
+        tampilkan(buku)
+        hapus = input("Masukkan ID buku yang ingin di hapus")
+        if hapus == "selesai":
+            break
+        else:
+            buku_dipilih = None
+            for item in buku:
+                if item["id"] == int(hapus):
+                    buku_dipilih = item
+            if buku_dipilih is None:
+                print("Buku tidak ditemukan")
+            else:
+                buku.remove(buku_dipilih)
+                simpan(file_buku, buku)
+                print("buku dihapus")
+
+def menu_admin(buku):
+    while True:
+        print("=== Menu Admin===")
+        print("1. Lihat Buku")
+        print("2. Tambah Buku")
+        print("3. Ubah Buku")
+        print("4. Hapus Buku")
+        print("5. Logout")
+
+        pilihan = input("Masukkan Pilihanmu: ")
+        if pilihan == "1":
+            tampilkan(buku)
+        elif pilihan == "2":
+            tambah_buku(buku)
+        elif pilihan == "3":
+            ubah_buku(buku)
+        elif pilihan == "4":
+            hapus_buku(buku)
+        elif pilihan == "5":
+            break
+        else:
+            print("Pilihan tidak ada")
+
+def menu_user(buku):
+    while True:
+        print("=== Menu User===")
+        print("1. Lihat Buku")
+        print("2. Logout")
+
+        pilihan = input("Masukkan Pilihanmu: ")
+        if pilihan == "1":
+            tampilkan(buku)
+        elif pilihan == "2":
+            break
+        else:
+            print("Pilihan tidak ada")
