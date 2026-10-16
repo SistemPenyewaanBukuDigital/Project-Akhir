@@ -39,3 +39,35 @@ def login(user):
     if user and user["password"] == password:
         print(f"Login berhasil!")
     return None
+
+def tampilkan(buku):
+    if not buku:
+        print("belum ada buku")
+        return
+    tabel = PrettyTable()
+    tabel.field_names = ["ID", "Judul","Penulis", "harga", "Stok"]
+    for item in buku:
+        tabel.add_row(
+            [
+                item["id"], item["judul"], item["penulis"], item["harga"], item["stok"]
+            ]
+        )
+    print(tabel) 
+
+def tambah_buku(buku):
+    while True:
+        print("=== Tambah Buku ===")
+        judul = input("Masukkan judul buku: ")
+        if judul == "selesai":
+            break 
+        else:
+            penulis = input("Masukkan nama penulis: ")
+            harga = input("Masukkan Harga Sewa: Rp")
+            stok = input("Masukkan stok: ")
+        id_baru = buku[-1]["id"] + 1 if buku else 1
+        buku.append (
+            {
+                "id":id_baru, "judul": judul, "penulis": penulis, "harga": harga, "stok": stok
+            }
+        )
+        simpan(file_buku, buku)
