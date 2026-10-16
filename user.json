@@ -1,0 +1,28 @@
+[
+    {
+        "username": "admin",
+        "password": "123",
+        "role": "admin",
+        "saldo": 99999999999999999999999999999
+    },
+    {
+        "username": "tyon",
+        "password": "123",
+        "role": "user"
+    },
+    {
+        "username": "Naufa",
+        "password": "123",
+        "role": "user"
+    },
+    {
+        "username": "Irfan",
+        "password": "123",
+        "role": "user"
+    },
+    {
+        "username": "Samuel",
+        "password": "123",
+        "role": "user"
+    }
+]
