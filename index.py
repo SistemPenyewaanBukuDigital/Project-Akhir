@@ -18,13 +18,68 @@ def buka(nama_file):
         return[]
 
 def simpan(nama_file, data):
-     with open(nama_file, "w", encoding="utf-8") as f:
-         json.dump(data, f, indent=4)
+    with open(nama_file, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4)
+
+def input_teks(pesan):
+    """Input teks, tidak boleh kosong."""
+    while True:
+        nilai = input(pesan).strip()
+        if nilai:
+            return nilai
+        print("Input tidak boleh kosong")
+
+
+def input_angka(pesan):
+    """Input bilangan bulat, tidak boleh negatif."""
+    while True:
+        nilai = input(pesan).strip()
+        try:
+            angka = int(nilai)
+        except ValueError:
+            print("Input harus berupa angka")
+            continue
+        if angka < 0:
+            print("Angka tidak boleh negatif")
+            continue
+        return angka
+
+
+def tanya_lanjut():
+    """Return True kalau user mau lanjut, False kalau tidak."""
+    while True:
+        jawab = input("Apakah masih ingin melanjutkan (y/n)?: ").strip().lower()
+        if jawab == "y":
+            return True
+        elif jawab == "n":
+            return False
+        print("Pilihan tidak valid")
+
+
+def cari_buku(buku, id_buku):
+    for item in buku:
+        if item["id"] == id_buku:
+            return item
+    return None
 
 def registrasi(user):
     print("=== Registrasi ===")
-    username = input("masukkan username: ")
-    password = pwinput.pwinput ("Masukkan password: ")
+    while True:
+        username = input_teks("Masukkan username: ")
+        if username == "":
+            print("Username tidak boleh kosong")
+            continue
+        elif any (u["username"] == username for u in user):
+                print("Username sudah dipakai")
+        else:
+            break
+    while True:
+        password = pwinput.pwinput ("Masukkan password: ")
+        if password == "":
+            print("Password tidak boleh kosong")
+        else:
+            break
+        
     user.append({"username": username, "password": password, "role": "user"})
     simpan(file_user, user)
     print("berhasil registrasi! silahkan login")
@@ -34,10 +89,10 @@ def login(user):
     username  = input("masukkan username: ")
     password = pwinput.pwinput ("masukkan password: ")
     for i in user:
-        if i["username"] == username and i["password"] == password:
-            return i
-    if user and user["password"] == password:
-        print(f"Login berhasil!")
+            if i["username"] == username and i["password"] == password:
+                print("Login berhasil!")
+                return i
+    print("Username atau password salah")
     return None
 
 def tampilkan(buku):
@@ -57,50 +112,75 @@ def tampilkan(buku):
 def tambah_buku(buku):
     while True:
         print("=== Tambah Buku ===")
-        judul = input("Masukkan judul buku: ")
-        if judul == "selesai":
-            break 
-        else:
-            penulis = input("Masukkan nama penulis: ")
-            harga = input("Masukkan Harga Sewa: Rp")
-            stok = input("Masukkan stok: ")
-        id_baru = buku[-1]["id"] + 1 if buku else 1
+        judul = input_teks("Masukkan judul buku: ")
+        penulis = input_teks("Masukkan nama penulis: ")
+        harga = input_angka("Masukkan harga sewa: Rp")
+        stok = input_angka("Masukkan stok: ")
+        id_baru = max((b["id"] for b in buku), default=0) + 1
         buku.append (
             {
                 "id":id_baru, "judul": judul, "penulis": penulis, "harga": harga, "stok": stok
-            }
+                }
         )
-        simpan(file_buku, buku)
+        if simpan(file_buku, buku):
+            print("Buku berhasil ditambahkan")
+        else:
+            buku.pop()
+        if not tanya_lanjut():
+            break
 
 def ubah_buku(buku):
     tampilkan(buku)
     while True:
-        print("Ketik selesai jika tidak ingin mengubah lagi")
-        ubah =  input("Masukkan id buku yang ingin di ubah: ")
-        if ubah == "selesai":
-            break
-        else:
-            buku_dipilih = None
-            for item in buku:
-                if item["id"] == int(ubah):
-                    buku_dipilih = item
-            if buku_dipilih is None:
-                print("Buku tidak ditemukan")
-                continue
-            buku_dipilih["judul"] = input("Masukkan Judul: ")
-            buku_dipilih["penulis"] = input("Masukkan nama penulis: ")
-            buku_dipilih["harga"] = input("Masukkan harga sewa: Rp")
-            buku_dipilih["stok"] = input("Masukkan stok: ")
+        ubah = input("Masukkan id buku yang ingin diubah: ")
+        if not ubah.isdigit():
+            print("ID harus berupa angka")
+            continue
 
-            simpan(file_buku, buku)
-            print("data telah diubah")
-            
+        buku_dipilih = None
+        for item in buku:
+            if item["id"] == int(ubah):
+                buku_dipilih = item
+                break
+
+        if buku_dipilih is None:
+            print("Buku tidak ditemukan")
+            continue
+
+        while True:
+            print("\nPilih data yang ingin diubah:")
+            print("1. Judul")
+            print("2. Penulis")
+            print("3. Harga sewa")
+            print("4. Stok")
+            pilihan = input("Pilihan: ")
+
+            if pilihan == "1":
+                buku_dipilih["judul"] = input_teks("Masukkan judul: ")
+            elif pilihan == "2":
+                buku_dipilih["penulis"] = input_teks("Masukkan nama penulis: ")
+            elif pilihan == "3":
+                buku_dipilih["harga"] = input_angka("Masukkan harga sewa: Rp")
+            elif pilihan == "4":
+                buku_dipilih["stok"] = input_angka("Masukkan stok: ")
+            elif pilihan == "0":
+                break
+            else:
+                print("Pilihan tidak valid")
+                continue
+
+            if simpan(file_buku, buku):
+                print("Data berhasil diubah")
+
+        if not tanya_lanjut():
+            break
+
 def hapus_buku(buku):
     while True:
         tampilkan(buku)
-        hapus = input("Masukkan ID buku yang ingin di hapus")
-        if hapus == "selesai":
-            break
+        hapus = input("Masukkan ID buku yang ingin di hapus: ").strip()
+        if not hapus.isdigit():
+            print("ID harus berupa angka")
         else:
             buku_dipilih = None
             for item in buku:
@@ -112,6 +192,8 @@ def hapus_buku(buku):
                 buku.remove(buku_dipilih)
                 simpan(file_buku, buku)
                 print("buku dihapus")
+        if not tanya_lanjut():
+            break
 
 def menu_admin(buku):
     while True:
@@ -122,7 +204,7 @@ def menu_admin(buku):
         print("4. Hapus Buku")
         print("5. Logout")
 
-        pilihan = input("Masukkan Pilihanmu: ")
+        pilihan = input("Masukkan Pilihanmu: ").strip()
         if pilihan == "1":
             tampilkan(buku)
         elif pilihan == "2":
@@ -142,7 +224,7 @@ def menu_user(buku):
         print("1. Lihat Buku")
         print("2. Logout")
 
-        pilihan = input("Masukkan Pilihanmu: ")
+        pilihan = input("Masukkan Pilihanmu: ").strip()
         if pilihan == "1":
             tampilkan(buku)
         elif pilihan == "2":
