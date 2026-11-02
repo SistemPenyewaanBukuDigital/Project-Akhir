@@ -492,115 +492,121 @@ Berikut tampilan program saat dijalankan di terminal. Ganti `LINK_GAMBAR` dengan
 
 ### 1. Menu Awal
 
-<img width="600" alt="menu awal" src="LINK_GAMBAR" />
+<img width="468" height="249" alt="WhatsApp Image 2026-11-02 at 22 32 14" src="https://github.com/user-attachments/assets/e0df0ce6-d2d5-4403-a664-bb52d343f57a" />
 
 Menu awal berisi pilihan Login, Daftar Akun Baru, dan Keluar.
 
 ### 2. Registrasi Akun
 
-<img width="600" alt="registrasi" src="LINK_GAMBAR" />
+<img width="412" height="157" alt="WhatsApp Image 2026-11-02 at 22 37 18" src="https://github.com/user-attachments/assets/7f1f588a-f22a-4012-819d-f814b95aa203" />
 
 Pengguna memasukkan nama pengguna dan sandi (tampil `*`). Input yang tidak memenuhi aturan (nama terlalu pendek, sandi kurang dari 6 karakter, atau nama sudah terdaftar) ditolak.
 
 ### 3. Login Berhasil
 
 - Admin
-<img width="600" alt="login admin" src="LINK_GAMBAR" />
+<img width="424" height="345" alt="WhatsApp Image 2026-11-02 at 22 39 55" src="https://github.com/user-attachments/assets/dd32d8b8-25f9-41d1-bea8-e305db79d8d3" />
 
 ---
 
 - Pengguna
-<img width="600" alt="login pengguna" src="LINK_GAMBAR" />
+<img width="384" height="346" alt="WhatsApp Image 2026-11-02 at 22 41 14" src="https://github.com/user-attachments/assets/dd92737a-2d8a-4bea-a5c8-4f9d9122b528" />
 
 Program menampilkan pesan login berhasil beserta role dan nama pengguna.
 
 ### 4. Login Gagal
 
-<img width="600" alt="login gagal" src="LINK_GAMBAR" />
+<img width="822" height="799" alt="WhatsApp Image 2026-11-02 at 22 45 24" src="https://github.com/user-attachments/assets/c79419f6-9cdd-43b4-a0c1-4cbbc33e8d7c" />
 
 Jika nama pengguna atau sandi salah, program menampilkan sisa percobaan. Setelah gagal 3 kali, muncul hitung mundur 5 detik lalu pengguna kembali ke menu awal.
 
 ### 5. Menu Admin
 
-<img width="600" alt="menu admin" src="LINK_GAMBAR" />
+<img width="369" height="279" alt="WhatsApp Image 2026-11-02 at 22 46 27" src="https://github.com/user-attachments/assets/2cdf6934-d656-49f4-b444-f9bd7e19c483" />
 
 Admin mendapat 8 menu: *Lihat Buku, Tambah Buku, Edit Buku, Hapus Buku, Lihat Buku yang Sedang Disewa, Riwayat Transaksi Semua User, Laporan Ringkas, dan Keluar.*
 
 ### 6. Menu Pengguna
 
-<img width="600" alt="menu pengguna" src="LINK_GAMBAR" />
+<img width="409" height="259" alt="WhatsApp Image 2026-11-02 at 22 47 23" src="https://github.com/user-attachments/assets/0c635a94-c7fe-4c43-ba8d-5586b7950bf2" />
 
 Pengguna mendapat 7 menu: *Lihat Buku, Sewa Buku, Buku yang Sedang Saya Sewa, Cek Saldo, Top Up, Riwayat Transaksi Saya, dan Keluar.*
 
 ### 7. Tambah Buku (Admin)
 
-<img width="600" alt="tambah buku" src="LINK_GAMBAR" />
+<img width="636" height="340" alt="WhatsApp Image 2026-11-02 at 23 52 44" src="https://github.com/user-attachments/assets/95272411-c67b-4d23-a801-7fef600feafe" />
 
 Admin mengisi judul, penulis, harga sewa per hari, dan stok. Setiap input divalidasi.
 
 ### 8. Edit Buku (Admin)
 
-<img width="600" alt="edit buku" src="LINK_GAMBAR" />
+<img width="634" height="466" alt="WhatsApp Image 2026-11-02 at 23 53 57" src="https://github.com/user-attachments/assets/00604f9d-a4c5-41bc-b73c-6f95fc06ab19" />
 
 Admin memilih ID buku, lalu memilih data yang ingin diubah.
 
 ### 9. Hapus Buku (Admin)
 
-<img width="600" alt="hapus buku" src="LINK_GAMBAR" />
+<img width="630" height="319" alt="WhatsApp Image 2026-11-02 at 23 55 05" src="https://github.com/user-attachments/assets/dbcbd810-4f50-4e68-9775-2d60e9265a05" />
 
 Sebelum buku dihapus, program meminta konfirmasi `y` atau `n`. Jika buku sedang disewa, tampil peringatan.
 
 ### 10. Buku yang Sedang Disewa (Admin)
 
-<img width="600" alt="sewa aktif admin" src="LINK_GAMBAR" />
+<img width="880" height="118" alt="WhatsApp Image 2026-11-02 at 23 56 34" src="https://github.com/user-attachments/assets/b8c60c74-5dd5-4846-a2f3-d10441b5c09d" />
 
 Admin melihat semua sewa aktif dari semua pengguna, lengkap dengan kolom Penyewa dan Sisa Waktu.
 
 ### 11. Riwayat Transaksi dan Laporan Ringkas (Admin)
 
-<img width="600" alt="riwayat dan laporan admin" src="LINK_GAMBAR" />
+<img width="1189" height="396" alt="WhatsApp Image 2026-11-03 at 00 01 25" src="https://github.com/user-attachments/assets/86da3e4d-9707-4840-80e8-ab5216b01540" />
+<img width="433" height="282" alt="WhatsApp Image 2026-11-03 at 00 02 29" src="https://github.com/user-attachments/assets/46a9ab63-bbf7-4b4f-81f9-401adc485125" />
 
 Admin melihat seluruh transaksi, serta laporan berisi total pendapatan, jumlah transaksi, dan tiga buku terlaris.
 
 ### 12. Top Up Saldo (Pengguna)
 
-<img width="600" alt="top up" src="LINK_GAMBAR" />
+<img width="429" height="292" alt="WhatsApp Image 2026-11-03 at 00 05 01" src="https://github.com/user-attachments/assets/c9ff4a45-08bb-439e-85cf-c1aab4abbeac" />
 
 Pengguna memasukkan nominal top up (Rp10.000 sampai Rp500.000), lalu mengonfirmasi dengan `y` atau `n`.
 
 ### 13. Sewa Buku dan Invoice (Pengguna)
 
-<img width="600" alt="sewa buku dan invoice" src="LINK_GAMBAR" />
+<img width="630" height="592" alt="WhatsApp Image 2026-11-03 at 00 06 54" src="https://github.com/user-attachments/assets/f10436a0-f1a8-4603-a1e5-1ac9b82c3c4d" />
 
 Pengguna memilih ID buku dan lama sewa. Jika saldo dan stok mencukupi, sewa berhasil dan invoice ditampilkan.
 
 ### 14. Sewa Gagal (Saldo Tidak Cukup atau Stok Habis)
 
-<img width="600" alt="sewa gagal" src="LINK_GAMBAR" />
+<img width="633" height="313" alt="WhatsApp Image 2026-11-03 at 00 08 40" src="https://github.com/user-attachments/assets/11f952d7-d47a-4e2a-9b04-784784314608" />
 
 Jika saldo tidak cukup atau stok buku habis, program menampilkan pesan dan sewa tidak diproses.
 
 ### 15. Buku yang Sedang Saya Sewa (Pengguna)
 
-<img width="600" alt="sewa aktif pengguna" src="LINK_GAMBAR" />
+<img width="760" height="109" alt="WhatsApp Image 2026-11-03 at 00 10 04" src="https://github.com/user-attachments/assets/b2e2d7fb-8c74-426a-ad67-13cad65cdece" />
 
 Pengguna hanya melihat sewa miliknya sendiri beserta sisa waktu sewa.
 
 ### 16. Riwayat Transaksi Saya (Pengguna)
 
-<img width="600" alt="riwayat pengguna" src="LINK_GAMBAR" />
+<img width="784" height="141" alt="WhatsApp Image 2026-11-03 at 00 10 44" src="https://github.com/user-attachments/assets/b95cd51c-c889-414b-b6e8-c914430d7864" />
 
 Pengguna hanya melihat transaksi miliknya, tanpa kolom Pengguna.
 
 ### 17. Keluar dan Ganti Akun
 
-<img width="600" alt="keluar" src="LINK_GAMBAR" />
+<img width="411" height="354" alt="WhatsApp Image 2026-11-03 at 00 12 48" src="https://github.com/user-attachments/assets/3b5d2eff-08e7-4f66-b844-74bcee3d31c4" />
+<img width="382" height="189" alt="WhatsApp Image 2026-11-03 at 00 12 48 (1)" src="https://github.com/user-attachments/assets/b7fd7fe8-6c45-48d4-9765-0980cad2ae36" />
 
 Setelah memilih Keluar di menu admin atau pengguna, program kembali ke menu awal sehingga pengguna dapat login dengan akun lain.
 
 ### 18. Data Tersimpan di File CSV
 
-<img width="600" alt="file csv" src="LINK_GAMBAR" />
+<img width="406" height="202" alt="WhatsApp Image 2026-11-03 at 00 18 35" src="https://github.com/user-attachments/assets/8ea56615-b690-4624-a3ef-728d970f0a73" />
+<img width="531" height="202" alt="WhatsApp Image 2026-11-03 at 00 18 35 (1)" src="https://github.com/user-attachments/assets/cb44492c-d0bb-4f60-9128-83de61dc816c" />
+<img width="730" height="256" alt="WhatsApp Image 2026-11-03 at 00 18 35 (2)" src="https://github.com/user-attachments/assets/9d55fa72-9a13-4b2e-a496-990475fce4f8" />
+<img width="1138" height="463" alt="WhatsApp Image 2026-11-03 at 00 18 35 (3)" src="https://github.com/user-attachments/assets/99c24edd-ae45-4f7b-a17e-a408b4cde912" />
+<img width="301" height="148" alt="WhatsApp Image 2026-11-03 at 00 18 35 (4)" src="https://github.com/user-attachments/assets/06651fcd-3685-41f5-9e6f-13d6e51110a6" />
 
 Data akun, buku, sewa, transaksi, dan saldo tersimpan di file CSV dan tetap ada saat program dijalankan kembali.
 
