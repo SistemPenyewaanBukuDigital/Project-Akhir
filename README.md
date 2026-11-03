@@ -164,7 +164,7 @@ Contoh satu data sewa:
 
 <!-- Ganti baris di bawah dengan gambar flowchart kamu -->
 <img width="1109" height="1322" alt="PA DDP Kelompok 6-Menu Utama drawio (2)" src="https://github.com/user-attachments/assets/bdea2861-8287-4f9a-bf19-33cfd9cd8360" />
-![Uploading PA DDP Kelompok 6-Menu Admin.drawio (3).png…]()
+
 <img width="827" height="474" alt="image" src="https://github.com/user-attachments/assets/4842c23a-fa45-409c-afce-b111e3401b03" />
 
 ### 1. Awal program
