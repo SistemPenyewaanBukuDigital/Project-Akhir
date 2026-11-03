@@ -163,8 +163,8 @@ Contoh satu data sewa:
 ## Flowchart dan Penjelasan Alur
 
 <!-- Ganti baris di bawah dengan gambar flowchart kamu -->
-<img width="877" height="1059" alt="image" src="https://github.com/user-attachments/assets/82bf3a19-b0a5-47c2-99c4-95aee274dd12" />
-<img width="875" height="786" alt="image" src="https://github.com/user-attachments/assets/f2f9ba44-1e95-46f9-8dc8-25054af2c8db" />
+<img width="1109" height="1322" alt="PA DDP Kelompok 6-Menu Utama drawio (2)" src="https://github.com/user-attachments/assets/bdea2861-8287-4f9a-bf19-33cfd9cd8360" />
+![Uploading PA DDP Kelompok 6-Menu Admin.drawio (3).png…]()
 <img width="827" height="474" alt="image" src="https://github.com/user-attachments/assets/4842c23a-fa45-409c-afce-b111e3401b03" />
 
 ### 1. Awal program
