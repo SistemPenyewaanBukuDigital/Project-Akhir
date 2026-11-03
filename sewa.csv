@@ -1,0 +1,4 @@
+id_sewa,nama_pengguna,id_buku,judul,durasi,total,waktu_sewa,status
+1,tyon,1,Laskar Pelangi,5,10000,2026-11-03 20:39:07,aktif
+2,tyon,5,Negeri 5 Menara,9,13500,2026-11-03 20:39:13,aktif
+3,tyon,3,Atomic Habits,2,6000,2026-11-03 20:39:19,aktif
