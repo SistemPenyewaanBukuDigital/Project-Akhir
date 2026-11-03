@@ -492,8 +492,7 @@ Penjelasan:
 
 ## Screenshot Output
 
-Berikut tampilan program saat dijalankan di terminal. Ganti `LINK_GAMBAR` dengan link screenshot kamu.
-
+Berikut tampilan program saat dijalankan di terminal.
 ### 1. Menu Awal
 
 <img width="468" height="249" alt="WhatsApp Image 2026-11-02 at 22 32 14" src="https://github.com/user-attachments/assets/e0df0ce6-d2d5-4403-a664-bb52d343f57a" />
