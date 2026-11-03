@@ -11,6 +11,8 @@ Aplikasi CLI berbasis Python untuk menyewa buku secara digital, lengkap dengan s
 - Nama : Naufa Fauza Eky | NIM : 060
 - Nama : Gresius Krisna Samuel | NIM : 057 
 
+<img width="652" height="585" alt="WhatsApp Image 2026-11-03 at 20 46 59" src="https://github.com/user-attachments/assets/2c02fd66-3153-47f8-a4ff-105b18a646e4" />
+
 </div>
 
 ---
