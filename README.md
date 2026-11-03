@@ -165,6 +165,9 @@ Contoh satu data sewa:
 <!-- Ganti baris di bawah dengan gambar flowchart kamu -->
 <img width="1109" height="1322" alt="PA DDP Kelompok 6-Menu Utama drawio (2)" src="https://github.com/user-attachments/assets/bdea2861-8287-4f9a-bf19-33cfd9cd8360" />
 
+<img width="1562" height="1363" alt="IMG-20261103-WA0008" src="https://github.com/user-attachments/assets/d5a7765d-62b0-4699-a16f-f80080f9c043" />
+
+
 <img width="827" height="474" alt="image" src="https://github.com/user-attachments/assets/4842c23a-fa45-409c-afce-b111e3401b03" />
 
 ### 1. Awal program
